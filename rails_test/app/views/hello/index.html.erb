@@ -1,0 +1,7 @@
+Hello World!<br>
+<!--<%= @text %>-->
+<% if @date_only %>
+<%= @text %>
+<% else %>
+<%= Time.now %>
+<% end %>

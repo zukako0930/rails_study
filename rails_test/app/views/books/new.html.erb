@@ -1,0 +1,7 @@
+<h1>New Book</h1>
+
+<%= render 'form', book: @book %>
+<!--form(部分テンプレート)を呼び出して入力をすると指示-->
+<!--_form.html.erbの引数bookに@bookをセットする-->
+
+<%= link_to 'Back', books_path %>
