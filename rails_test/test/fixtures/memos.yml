@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  memoable: one
+  memoable_type: Memoable
+  body: MyString
+
+two:
+  memoable: two
+  memoable_type: Memoable
+  body: MyString
