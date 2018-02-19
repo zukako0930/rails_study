@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   get 'view/new'
   
   get 'login/index'
+  
+  get 'record/find'
+  get 'record/find_by'
+  get 'record/exist'
 end
