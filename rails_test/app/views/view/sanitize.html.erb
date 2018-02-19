@@ -1,0 +1,13 @@
+<%
+msg=<<EOL
+<p style="color:Red;">Railsについて<br />質問があります。</p>
+<strong id="hoge",class="myclass">早く</strong>
+<a href="Javascript:alert('NG')">こちらに解答しなさい。</a>
+<a href="google.com">グーグル</a>
+EOL
+%>
+<%= sanitize msg %>
+<hr/>
+<%=sanitize msg,tags:%w(p,a),attributes:%w(id class href style) %>
+<!--attributesのなかにあるもの（許可するもの）を明示した書き方-->
+<!--href常に削除の対象になる？-->

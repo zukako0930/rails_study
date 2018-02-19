@@ -1,0 +1,16 @@
+<%= favicon_link_tag 'favicon.ico' %>
+<%= link_to '検索窓','http://google.com'%><br />
+<%= link_to 'トップ',{controller: :hello,action: :index}%><br />
+<%= link_to '削除', book_path(1),{method: :delete,data: {confirm:'削除してもいいですか',disable_with:'処理中'}}%>
+<br />
+<!--url_forはURLの文字列を表示する。-->
+<%= url_for({action: :new})%><br />
+<%= url_for({controller: :books,action: :show, id: 5})%><br />
+<% @book=Book.find(2) %>
+<%= url_for(@book) %>
+
+<!--条件に応じてリンクを生成するlink_to_if,link_to_unless-->
+<% #@user=User.new %>
+<%= link_to_if @user.nil?,'ログイン',{controller: :login,action: :index}%>
+<br />
+<%= image_tag 'umaru_kirie.jpg', size: '200x110',alt: 'anime'%><br />

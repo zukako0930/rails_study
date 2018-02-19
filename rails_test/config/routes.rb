@@ -13,4 +13,12 @@ Rails.application.routes.draw do
   get 'view/dat_select'
   get 'view/col_radio'
   get 'view/fields'
+  get 'view/simple_format'
+  get 'view/truncate'
+  get 'view/sanitize'
+  get 'view/link'
+  get 'view/url_for'
+  get 'view/new'
+  
+  get 'login/index'
 end
