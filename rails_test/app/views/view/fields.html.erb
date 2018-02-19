@@ -1,0 +1,27 @@
+<!--form_forブロックの中で異なるモデルを編集する=fields_forメソッド-->
+<%= form_for(@user, url:{action: :create}) do |f|%>
+    <div class='field'>
+        <%= f.label :username, 'ユーザ名：'%><br />
+        <%= f.text_field :username %>
+    </div>
+    <div class='field'>
+        <%= f.label :email, 'メールアドレス：' %><br />
+        <%= f.text_field :email %>
+    </div>
+    <!--field_set_tagメソッドはフォーム要素をグループ化する-->
+    <!--サブフォーム的なものにできる-->
+    <%= field_set_tag '著者情報' do %>
+    <!--以下ではfor @user.authorなので、ユーザー情報に関連づいた著者情報が変更の対象になる-->
+        <%= fields_for @user.author do |af| %>
+            <div class='field'>
+                <%= af.label :name, '著者名：' %><br />
+                <%= af.text_field :name %>
+            </div>
+            <div class='field'>
+                <%= af.label :birth, '誕生日：' %><br />
+                <%= af.text_field :birth %>
+            <div>
+        <% end %>
+    <% end %>
+    <%= f.submit 'これにする'%>
+<% end %>

@@ -1,0 +1,11 @@
+<%
+article=<<EOL
+WINGニュース特別号
+
+こんにちは。
+アイウエオかきくけこ。
+<script>alert('Happy rails!!');</script>
+EOL
+%>
+<!--このままでは改行にならないので以下を追加-->
+<%= simple_format(article,{class: :article},{sanitize: false,wrapper_tag:'blockquote'}) %>

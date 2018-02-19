@@ -9,3 +9,12 @@
     </tr>
 <% end %>
 </table>
+<!--<%= debug(@books) %>-->
+<br />
+<% @current = capture do%>
+今の時刻は<%= Time.now %>だよ。<br>
+<%= format_datetime(Time.now, :datetime) %>
+<% end %>
+<%= @current %><br />
+<div style="color:Red"><%= @current %></div>
+

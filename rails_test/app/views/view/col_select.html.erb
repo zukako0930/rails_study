@@ -1,3 +1,6 @@
 <%= form_for(@book) do |f| %>
-  <%= f.collection_select :publish, @books, :publish, :publish %>
+  出版社
+  <%= f.collection_select :publish, @books, :publish, :publish %><br>
+  タイトル
+  <%= f.collection_select :title, @books, :title, :title %>
 <% end %>

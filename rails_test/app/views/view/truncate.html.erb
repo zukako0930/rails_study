@@ -1,0 +1,5 @@
+<% msg= '<strong>Rails</strong>はRubyベースのフレームワークだぞい。私のお墓の前で泣かないでください。今日も1日がんばるぞい。さてはアンチだなオメー。'%>
+<%= truncate(msg, length: 50) %><br />
+<%= highlight(truncate(msg, length: 50),'Rails')%><br />
+<%= truncate(msg, length:50, separator: '。')%><br />
+<%= truncate(msg, length:50, omission: '...後略...')%><br />
