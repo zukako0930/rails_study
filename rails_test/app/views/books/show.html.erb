@@ -32,3 +32,11 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+<br />books
+<br />
+<% @books.each do |book| %>
+    <tr>
+        <td>isbn<%= book.isbn %></td><br/>
+        <td>title<%= book.title %></td><br/>
+    </tr>
+<% end %>
