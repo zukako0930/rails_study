@@ -25,4 +25,9 @@ Rails.application.routes.draw do
   get 'record/find'
   get 'record/find_by'
   get 'record/exist'
+  get 'record/scope'
+  get 'record/count'
+  get 'record/update_all'
+  get 'record/transact'
+  get 'record/belongs'
 end

@@ -1,0 +1,7 @@
+<h2>「<%= @review.book.title %>」waka_jp</h2>
+<hr />
+<ul>
+<% @book.reviews.each do |review| %>
+    <li><%= review.body %>(<%= review.updated_at %>)</li>
+<% end %>
+</ul>
