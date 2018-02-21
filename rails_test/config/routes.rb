@@ -36,4 +36,8 @@ Rails.application.routes.draw do
   get 'ctrl/upload'
   get 'ctrl/upload_process'
   post 'ctrl/upload_process'
+  
+  get 'login/index'
+  get 'login/auth'
+  post 'login/auth'
 end
