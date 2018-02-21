@@ -13,6 +13,8 @@ class CtrlController < ApplicationController
             result="#{name}をアップロードしました"
         end
         render plain: result
+        sleep 3
+        send_file 'public/docs/井出きゅん.png', type: 'image/png'
         
     end
     
