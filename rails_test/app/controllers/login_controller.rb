@@ -6,7 +6,8 @@ class LoginController < ApplicationController
     if usr && usr.authenticate(params[:password]) then
       reset_session
       session[:usr] = usr.id
-      redirect_to params[:referer]
+      redirect_to '/hello/index'
+      # redirect_to params[:referer]
     else
       flash.now[:referer] = params[:referer]
       @error = 'ユーザ名／パスワードが間違っています。'
