@@ -60,5 +60,11 @@ class RecordController < ApplicationController
     def belongs
         @review = Review.find(3)
         @book = Book.find_by(isbn: '978-4-7741-8411-1')
+        @user = User.find_by(username: 'yyamada')
     end
+    
+    def has_and_belongs
+        @book=Book.find_by(isbn: '978-4-7980-4803-1')
+    end
+    
 end

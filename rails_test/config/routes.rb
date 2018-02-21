@@ -30,4 +30,10 @@ Rails.application.routes.draw do
   get 'record/update_all'
   get 'record/transact'
   get 'record/belongs'
+  get 'record/has_and_belongs'
+  
+  
+  get 'ctrl/upload'
+  get 'ctrl/upload_process'
+  post 'ctrl/upload_process'
 end

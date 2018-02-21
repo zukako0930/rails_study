@@ -5,3 +5,12 @@
     <li><%= review.body %>(<%= review.updated_at %>)</li>
 <% end %>
 </ul>
+
+<ul>
+    <li>ユーザ名：<%= @user.username %></li>
+    <li>email：<%= @user.email %></li>
+    <% unless @user.author.nil? %>
+        <li>著者名:<%= @user.author.name %></li>
+        <li>住所:<%= @user.author.address %></li>
+    <% end %>
+</ul>
